@@ -1,17 +1,30 @@
 
 {
-  "name": "Real-Estate-Transaction-Optimization-Contract-tests",
+  "name": "real-estate-transaction-optimization-contract",
   "version": "1.0.0",
-  "description": "Run unit tests on this project.",
+  "description": "A comprehensive blockchain-based solution for streamlining real estate transactions through smart contracts built on the Stacks blockchain using Clarity.",
   "type": "module",
   "private": true,
   "scripts": {
     "test": "vitest run",
     "test:report": "vitest run -- --coverage --costs",
-    "test:watch": "chokidar \"tests/**/*.ts\" \"contracts/**/*.clar\" -c \"npm run test:report\""
+    "test:watch": "chokidar \"tests/**/*.ts\" \"contracts/**/*.clar\" -c \"npm run test:report\"",
+    "lint": "clarinet check",
+    "deploy:devnet": "clarinet deploy --devnet",
+    "deploy:testnet": "clarinet deploy --testnet"
   },
-  "author": "",
-  "license": "ISC",
+  "keywords": [
+    "blockchain",
+    "smart-contracts",
+    "real-estate",
+    "escrow",
+    "stacks",
+    "clarity",
+    "property-management",
+    "document-verification"
+  ],
+  "author": "Real Estate Smart Contract Team",
+  "license": "MIT",
   "dependencies": {
     "@hirosystems/clarinet-sdk": "^2.3.2",
     "@stacks/transactions": "^6.12.0",
